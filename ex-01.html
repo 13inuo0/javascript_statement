@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문으로 날씨 확인하기</title>
+  </head>
+  <body>
+    <h1>오늘의 날씨를 선택하세요.</h1>
+    <label for="weatherSelect">날씨선택:</label>
+    <select name="weatherSelect" id="weatherSelect">
+      <option value="맑음">맑음</option>
+      <option value="비">비</option>
+      <option value="구름많음">구름많음</option>
+      <option value="눈">눈</option>
+      <option value="바람">바람</option>
+    </select>
+    <button id="weatherBtn">날씨확인</button>
+    <h3 id="weatherMessage">
+      <!-- js출력 -->
+    </h3>
+    <script>
+      let weatherBtn = document.querySelector("#weatherBtn");
+      //   console.log(weatherBtn);
+      let weatherMessage = document.querySelector("#weatherMessage");
+      console.log(weatherMessage);
+      let weatherSelect = document.querySelector("weatherSelect");
+      console.log(weatherSelect);
+    </script>
+  </body>
+</html>
