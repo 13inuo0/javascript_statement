@@ -23,9 +23,32 @@
       let weatherBtn = document.querySelector("#weatherBtn");
       //   console.log(weatherBtn);
       let weatherMessage = document.querySelector("#weatherMessage");
-      console.log(weatherMessage);
-      let weatherSelect = document.querySelector("weatherSelect");
-      console.log(weatherSelect);
+      //   console.log(weatherMessage);
+      let weatherSelect = document.querySelector("#weatherSelect");
+      //   console.log(weatherSelect);
+      weatherBtn.addEventListener("click", function () {
+        // 이벤트 잘 적용 되었는지 확인용
+        // console.log(weatherBtn);
+        // alert("click")
+        const wSelectValue = weatherSelect.value;
+        // console.log(wSelectValue);
+        if (wSelectValue === "맑음") {
+          weatherMessage.textContent =
+            "오늘은 맑고 화창한 날씨입니다. 외출하기 좋아요.";
+        } else if (wSelectValue === "비") {
+          weatherMessage.textContent = "오늘은 비가 오니 우산을 챙겨주세요.";
+        } else if (wSelectValue === "구름많음") {
+          weatherMessage.textContent = "오늘은 구름이 많고 흐립니다.";
+        } else if (wSelectValue === "눈") {
+          weatherMessage.textContent =
+            "오늘은 눈이 내립니다. 따뜻하게 입어주세요.";
+        } else if (wSelectValue === "바람") {
+          weatherMessage.textContent =
+            "오늘은 바람이 많이 붑니다. 외출시 주의해주세요.";
+        } else {
+          weatherMessage.textContent = "선택한 날씨의 정보가 없습니다.";
+        }
+      });
     </script>
   </body>
 </html>
